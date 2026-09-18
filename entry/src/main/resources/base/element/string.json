@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "A classic two-player Tic Tac Toe game"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "Tic Tac Toe"
+    }
+  ]
+}

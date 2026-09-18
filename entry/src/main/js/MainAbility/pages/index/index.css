@@ -1,0 +1,96 @@
+.game {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: #101b2d;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #5c7b9e;
+  border-radius: 12px;
+  background-color: #17243b;
+  flex-direction: column;
+}
+.board-row {
+  width: 100%;
+  height: 33.33%;
+  flex-direction: row;
+}
+.cell {
+  width: 33.33%;
+  height: 100%;
+  border-right: 2px solid #5c7b9e;
+  border-bottom: 2px solid #5c7b9e;
+  background-color: #1b3150;
+  justify-content: center;
+  align-items: center;
+}
+.cell-three, .cell-six, .cell-nine { border-right: 0; }
+.cell-seven, .cell-eight, .cell-nine { border-bottom: 0; }
+.cell-one, .cell-four, .cell-seven { background-color: #202d4a; }
+.cell-two, .cell-five, .cell-eight { background-color: #1b3448; }
+.cell-three, .cell-six, .cell-nine { background-color: #213653; }
+.mark {
+  font-size: 64px;
+}
+.mark-x { color: #ffbd4a; }
+.mark-o { color: #53e0d0; }
+.win-line {
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  width: 90%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: #d8b675;
+}
+.win-line-o { background-color: #82c4bd; }
+.win-line-row-one { top: 16.67%; }
+.win-line-row-two { top: 50%; }
+.win-line-row-three { top: 83.33%; }
+.win-line-column-one {
+  top: 5%;
+  left: 16.67%;
+  width: 5px;
+  height: 90%;
+}
+.win-line-column-two {
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: 90%;
+}
+.win-line-column-three {
+  top: 5%;
+  left: 83.33%;
+  width: 5px;
+  height: 90%;
+}
+.win-line-diagonal-down { top: 50%; transform: rotate(45deg); }
+.win-line-diagonal-up { top: 50%; transform: rotate(-45deg); }
+.reset {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 78px;
+  height: 78px;
+  border: 3px solid #f3f7f5;
+  border-radius: 39px;
+  background-color: #ef6f9d;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+.reload-icon {
+  width: 38px;
+  height: 38px;
+  border: 5px solid #f3f7f5;
+  border-right-color: transparent;
+  border-radius: 19px;
+  transform: rotate(-45deg);
+}

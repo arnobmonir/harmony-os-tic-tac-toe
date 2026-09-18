@@ -1,0 +1,9 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "A classic two-player Tic Tac Toe game for HarmonyOS wearable devices.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {}
+}

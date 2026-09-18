@@ -1,0 +1,43 @@
+{
+  "app": {
+    "bundleName": "com.arnob.tictactoe",
+    "vendor": "Tic Tac Toe",
+    "version": {
+      "code": 1000001,
+      "name": "1.0.1"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.arnob.tictactoe.entry",
+    "deviceType": [
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "installationFree": false,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "name": ".MainAbility",
+        "srcLanguage": "js",
+        "srcPath": "MainAbility",
+        "icon": "$media:tic_tac_toe",
+        "description": "$string:MainAbility_desc",
+        "label": "$string:MainAbility_label",
+        "type": "page"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": ".MainAbility"
+      }
+    ],
+    "mainAbility": ".MainAbility"
+  }
+}

@@ -1,0 +1,38 @@
+<div class="game">
+    <div class="board">
+        <div class="board-row">
+            <div class="cell cell-one" onclick="makeMove(0)"><text class="mark mark-x" if="{{ board[0] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[0] === 'O' }}">O</text></div>
+            <div class="cell cell-two" onclick="makeMove(1)"><text class="mark mark-x" if="{{ board[1] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[1] === 'O' }}">O</text></div>
+            <div class="cell cell-three" onclick="makeMove(2)"><text class="mark mark-x" if="{{ board[2] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[2] === 'O' }}">O</text></div>
+        </div>
+        <div class="board-row">
+            <div class="cell cell-four" onclick="makeMove(3)"><text class="mark mark-x" if="{{ board[3] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[3] === 'O' }}">O</text></div>
+            <div class="cell cell-five" onclick="makeMove(4)"><text class="mark mark-x" if="{{ board[4] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[4] === 'O' }}">O</text></div>
+            <div class="cell cell-six" onclick="makeMove(5)"><text class="mark mark-x" if="{{ board[5] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[5] === 'O' }}">O</text></div>
+        </div>
+        <div class="board-row">
+            <div class="cell cell-seven" onclick="makeMove(6)"><text class="mark mark-x" if="{{ board[6] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[6] === 'O' }}">O</text></div>
+            <div class="cell cell-eight" onclick="makeMove(7)"><text class="mark mark-x" if="{{ board[7] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[7] === 'O' }}">O</text></div>
+            <div class="cell cell-nine" onclick="makeMove(8)"><text class="mark mark-x" if="{{ board[8] === 'X' }}">X</text><text class="mark mark-o" if="{{ board[8] === 'O' }}">O</text></div>
+        </div>
+        <div class="win-line win-line-row-one win-line-x" if="{{ winningLineClass === 'win-line-row-one' && winner === 'X' }}"></div>
+        <div class="win-line win-line-row-one win-line-o" if="{{ winningLineClass === 'win-line-row-one' && winner === 'O' }}"></div>
+        <div class="win-line win-line-row-two win-line-x" if="{{ winningLineClass === 'win-line-row-two' && winner === 'X' }}"></div>
+        <div class="win-line win-line-row-two win-line-o" if="{{ winningLineClass === 'win-line-row-two' && winner === 'O' }}"></div>
+        <div class="win-line win-line-row-three win-line-x" if="{{ winningLineClass === 'win-line-row-three' && winner === 'X' }}"></div>
+        <div class="win-line win-line-row-three win-line-o" if="{{ winningLineClass === 'win-line-row-three' && winner === 'O' }}"></div>
+        <div class="win-line win-line-column-one win-line-x" if="{{ winningLineClass === 'win-line-column-one' && winner === 'X' }}"></div>
+        <div class="win-line win-line-column-one win-line-o" if="{{ winningLineClass === 'win-line-column-one' && winner === 'O' }}"></div>
+        <div class="win-line win-line-column-two win-line-x" if="{{ winningLineClass === 'win-line-column-two' && winner === 'X' }}"></div>
+        <div class="win-line win-line-column-two win-line-o" if="{{ winningLineClass === 'win-line-column-two' && winner === 'O' }}"></div>
+        <div class="win-line win-line-column-three win-line-x" if="{{ winningLineClass === 'win-line-column-three' && winner === 'X' }}"></div>
+        <div class="win-line win-line-column-three win-line-o" if="{{ winningLineClass === 'win-line-column-three' && winner === 'O' }}"></div>
+        <div class="win-line win-line-diagonal-down win-line-x" if="{{ winningLineClass === 'win-line-diagonal-down' && winner === 'X' }}"></div>
+        <div class="win-line win-line-diagonal-down win-line-o" if="{{ winningLineClass === 'win-line-diagonal-down' && winner === 'O' }}"></div>
+        <div class="win-line win-line-diagonal-up win-line-x" if="{{ winningLineClass === 'win-line-diagonal-up' && winner === 'X' }}"></div>
+        <div class="win-line win-line-diagonal-up win-line-o" if="{{ winningLineClass === 'win-line-diagonal-up' && winner === 'O' }}"></div>
+        <div class="reset" onclick="resetGame" if="{{ showReset }}">
+            <div class="reload-icon"></div>
+        </div>
+    </div>
+</div>
