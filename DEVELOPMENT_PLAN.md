@@ -16,10 +16,45 @@ Install a simple offline, two-player Tic-tac-toe game on the HUAWEI WATCH FIT 5:
 - `game.js` contains the platform-independent game rules.
 - `game.test.js` contains four passing rule tests.
 - `index.html`, `app.js`, and `styles.css` are a browser/watch-sized UI prototype.
-- The Fedora machine currently has Node/npm but no DevEco Studio, `hdc`, or `ohpm`.
+- Fedora is used for Git, browser testing, and game-logic tests. The Mac with DevEco Studio is the native Huawei development machine.
 - The prototype can be run locally with `python3 -m http.server 8080`.
 
-## Phase 1: Prepare Fedora
+## Phase 1: Prepare the Mac
+
+1. Install or update **DevEco Studio for Mac** using the package matching the Mac processor: Mac (ARM64) for Apple Silicon or Mac (x86) for Intel.
+2. Install the wearable SDK, toolchains, emulator/device tools, and signing components through DevEco Studio.
+3. Sign in to the Huawei Developer account.
+4. Clone or pull this repository on the Mac:
+
+   ```text
+   git clone https://github.com/arnobmonir/harmony-os-tic-tac-toe.git
+   cd harmony-os-tic-tac-toe
+   npm test
+   ```
+
+5. Confirm `hdc` and `ohpm` are available through the DevEco Studio installation if required.
+6. Create a blank Hello World wearable project and verify whether WATCH FIT 5 appears as a supported target.
+
+## Phase 2: Verify the watch platform
+
+1. Check whether WATCH FIT 5 supports a public HarmonyOS wearable app model.
+2. Check developer mode, debugging, signing, and direct test installation support.
+3. Build and deploy the Hello World project to the physical watch.
+4. If Hello World installs, continue with the game port. If it does not, use the official Watch AppGallery submission route if available; do not sideload an arbitrary package.
+
+## Phase 3: Fedora support workflow
+
+Use Fedora for source changes, browser testing, documentation, and GitHub synchronization:
+
+```text
+git pull origin main
+npm test
+git add .
+git commit -m "Describe the change"
+git push origin main
+```
+
+## Optional Fedora command-line tools
 
 1. Confirm the computer architecture:
 
